@@ -51,4 +51,4 @@ Once you add your API key below, make sure to not share it with anyone! The API 
 
 OPENAI_API_KEY="your-api-key-here"
 
-To run the code, enter python openai-test.py into the terminal / command line.
+To run the code, enter python ai_chat.py into the terminal / command line.
