@@ -1,4 +1,4 @@
-How to use Openai_Chat_Ai
+#How to use Openai_Chat_Ai
 
 Install Python
 
@@ -47,7 +47,7 @@ Once you create the .gitignore and .env files using the terminal or an integrate
 
 The .env file should look like the following:
 
-# Once you add your API key below, make sure to not share it with anyone! The API key should remain private.
+Once you add your API key below, make sure to not share it with anyone! The API key should remain private.
 
 OPENAI_API_KEY="your-api-key-here"
 
