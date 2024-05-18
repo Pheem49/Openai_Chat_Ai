@@ -99,7 +99,7 @@ OPENAI_API_KEY="your-api-key-here"
 
 ## [](https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request)
 
-## Sendding your api request
+## Sending your api request
 
 After you have Python configured and set up an API key, the final step is to send a request to the OpenAI API using the Python library. To do this, create a file named `ai_chat.py` using th terminal or an IDE.
 
