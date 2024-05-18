@@ -15,7 +15,7 @@ To create a virtual environment, Python supplies a built in [venv module](https:
  ```
  python -m venv openai-env
  ```
-**If it goes error, delete the openai-env folder and reinstall.
+**If it goes error, delete the openai-env folder and reinstall.**
 
  Once you’ve created the virtual environment, you need to activate it. On Windows, run:
   ```
