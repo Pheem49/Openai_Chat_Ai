@@ -94,13 +94,13 @@ The  `.env`  file should look like the following:
 ```text
 # Once you add your API key below, make sure to not share it with anyone! The API key should remain private.
 
-OPENAI_API_KEY=abc123
+OPENAI_API_KEY="your-api-key-here"
 ```
 
 ## [](https://platform.openai.com/docs/quickstart/step-3-sending-your-first-api-request)
 
 ## Sendding your api request
 
-After you have Python configured and set up an API key, the final step is to send a request to the OpenAI API using the Python library. To do this, create a file named `ai_chat.py` using th terminal or an IDE.After you have Python configured and set up an API key, the final step is to send a request to the OpenAI API using the Python library. To do this, create a file named `ai_chat.py` using th terminal or an IDE.
+After you have Python configured and set up an API key, the final step is to send a request to the OpenAI API using the Python library. To do this, create a file named `ai_chat.py` using th terminal or an IDE.
 
 To run the code, enter `python ai_chat.py` into the terminal / command line.
