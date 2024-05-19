@@ -1,35 +1,35 @@
-from openai import OpenAI
-import os
+from openai import OpenAI # นำเข้าOpenAIคลาสจากopenai เพื่อเข้าถึงโมเดลของ OpenAI API 
+import os # นำเข้าosโมดูลซึ่งมีฟังก์ชันสำหรับการโต้ตอบกับระบบปฏิบัติการ
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY")) # สร้างอินสแตนซ์ของOpenAIคลาสและตั้งapi_keyค่าคุณสมบัติเป็นค่าที่ดึงมาจากตัวแปรสภาพแวดล้อมOPENAI_API_KEY หรือดึงมาจากไฟล์.env
 
-def generate_response(user_input):
+def generate_response(user_input): # ฟังก์ชันนี้รจะรับอินพุตของผู้ใช้เป็นอาร์กิวเมนต์สตริง ( user_input) และสร้างข้อความตอบจากโมเดล AI
   """Generates a response from the AI based on the user's input."""
   completion = client.chat.completions.create(
-      model="gpt-3.5-turbo",
+      model="gpt-3.5-turbo", # โมเดลของ AI
       messages=[
-          {"role": "user", "content": user_input},
+          {"role": "user", "content": user_input}, # เป็นการกำหนดการสนทนาเป็นข้อความที่จะสร้างตาม "role" ที่เราตั้ง เช่น "user"
       ]
   )
 
-  return completion.choices[0].message
+  return completion.choices[0].message # ฟังก์ชันส่งคืนข้อความที่สร้างโดยโมเดลซึ่งจัดเก็บไว้ในmessage คุณสมบัติขององค์ประกอบแรก([0])ในchoicesรายการที่ส่งคืนโดย API
 
-def is_exit_command(user_input):
+def is_exit_command(user_input): # เป็นฟังก์ชันที่จะกำหนดข้อความเพื่อใช้ออกจากการแชท
   """Checks if the user input is an exit command."""
-  return user_input.lower() in ["exit", "quit", "bye"]
+  return user_input.lower() in ["exit", "quit", "bye"] # กำหนดคำที่ใช้ในการออกจากแชท
 
-# Start the conversation
-print("AI: Hello!")
-while True:
-  # Get user input
+# พิมพ์ข้อความให้ AI เริ่มทักทายประโยคแรก
+print("AI: Hello!") 
+while True: # เป็นการเริ่มต้นการวนซ้ำแบบไม่สิ้นสุดตราบใดที่ True ตรงตามเงื่อนไข
+  # รับข้อความจากผู้ใช้
   user_input = input("User: ")
 
-  # Check if the user wants to exit
+  # ตรวจสอบว่าข้อความเป็นคำสั่งออกโดยใช้ฟังก์ชัน is_exit_command หรือไม่
   if is_exit_command(user_input):
     break
 
-  # Generate AI response
+  # ให้ AI สร้างข้อความ
   ai_response = generate_response(user_input)
 
-  # Print AI response
+  # พิมพ์ข้อความของ AI ด้วยคำนำหน้า "AI: "
   print("AI:", ai_response)
