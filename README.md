@@ -1,4 +1,4 @@
-# How to use Openai_Chat_Ai
+# How to Run Openai_Chat_Ai
 
 สวัสดีครับ! นี้เป็นโปรเจคdemo โปรเจคแรกของผม หวังว่าทุกคนจะมีความสุขกับมันนะครับ
 
